@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://kit.fontawesome.com/5bc597a1ad.js" crossorigin="anonymous"></script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link rel="icon" type="image/png" href="icon_128.png">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>New Tab lV - Snake</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="sidebar" class="sidebar">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" class="menu">Home</a>
+				<a href="atari.html" class="menu">Breakout</a>
+				<a href="dino.html" class="menu">Dino Game</a>
+				<a href="doom.html" class="menu">DOOM</a>
+				<a href="gta.html" class="menu">GTA</a>
+				<a href="nfs.html" class="menu">Need For Speed</a>
+				<a href="pong.html" class="menu">Pong</a>
+                <a href="snake.html" class="menu">Snake</a>
+				<a href="about.html" class="menu">About</a>
+			</div>
+			<div class="section">
+				<div class="top_navbar">
+					<div class="hamburger">
+						<button class="hamburger" onclick="openNav()">&#9776;</button>
+					</div>
+					<div class="home_link">
+						<a href="index.html" class="link">New Tab lV</a>
+					</div>
+					<div class="search">
+					<form id="form" role="search">
+						<input type="search" id="query" name="q"
+						 placeholder=" Search..."
+						 aria-label="Search through site content">
+						<button>
+							<div class="search_icon">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							</div>
+						</button>
+					</form>
+					</div>
+				</div>
+				<div class="container">
+					<div class="heading">
+						<p>Game Title</p>
+					</div>
+					<div class="textbody">
+						<p>Request Credit</p>
+                        <div class="game">
+                        <iframe class="game" width="800" height="800" frame-border="0" src="classicSnake.html" allowfullscreen></iframe>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer-distributed">
+
+				<div class="footer-left">
+	
+					<h3>New Tab<span> lV</span></h3>
+	
+					<p class="footer-links">
+						<a href="index.html" class="link-1">Home</a>
+						
+						<a href="https://forms.gle/ThnZXwmGwjiyNLc37">Game Request</a>
+					
+						<a href="https://forms.gle/D2fBNw7KEMYqWA1p7">Bug Report</a>
+					
+						<a href="about.html">About</a>
+					</p>
+	
+					<p class="footer-company-name">New Tab lV © 2022</p>
+				</div>
+	
+				<div class="footer-center">
+	
+					<div>
+						<i class="fa fa-spotify"></i>
+						<a href="https://open.spotify.com/user/o39q22er84s3oh2tzc4rfyycp" class="spotify">theComic8r</a>
+					</div>
+	
+					<div>
+						<i class="fa fa-code"></i>
+						<a href="https://www.w3schools.com/html/default.asp" class="w3">Learn HTML 5</a>
+					</div>
+	
+					<div>
+						<i class="fa fa-envelope"></i>
+						<p><a href="mailto:theComic8r@gmail.com">theComic8r@gmail.com</a></p>
+					</div>
+	
+				</div>
+	
+				<div class="footer-right">
+	
+					<p class="footer-company-about">
+						<span>About this site</span>
+						New Tab lV is an updated version of my previous site, 'New Tab lll' Both sites allow users to enjoy many games completely unrestricted. You can view the source code for this site in my GitHub linked below.
+					</p>
+	
+					<div class="footer-icons">
+	
+						<a href="#"><i class="fa fa-reddit"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-unity"></i></a>
+						<a href="https://github.com/theComic8r"><i class="fa fa-github"></i></a>
+	
+					</div>
+	
+				</div>
+	
+			</footer>
+		</div>
+		<!--navigation sidebar-->
+		<script>
+			function openNav() {
+  			document.getElementById("sidebar").style.width = "250px";
+  			document.getElementById("section").style.marginLeft = "250px";
+			}
+			function closeNav() {
+  			document.getElementById("sidebar").style.width = "0";
+  			document.getElementById("section").style.marginLeft = "0";
+			}
+		</script>
+		<!--searchbar-->
+		<script>
+			const f = document.getElementById('form');
+			const q = document.getElementById('query');
+			const google = 'https://www.google.com/search?q=site%3A+';
+			const site = 'https://www.w3spaces-preview.com/newtablv/';
+
+			function submitted(event) {
+  			event.preventDefault();
+  			const url = google + site + '+' + q.value;
+  			const win = window.open(url, '_blank');
+  			win.focus();
+			}
+
+			f.addEventListener('submit', submitted);
+
+		</script>
+	</body>
+	<style>
+		*{
+			list-style: none;
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Montserrat', sans-serif;
+		}
+		body {
+			background-color: #1d4556;
+		}
+		.sidebar {
+			background-color: #1c1c1c;
+			height: 100%; /* 100% Full-height */
+  			width: 0; /* 0 width - change this with JavaScript */
+  			position: fixed; /* Stay in place */
+  			z-index: 1; /* Stay on top */
+  			top: 0;
+  			left: 0;
+  			overflow-x: hidden; /* Disable horizontal scroll */
+  			padding-top: 60px; /* Place content 60px from the top */
+  			transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+		}
+		.menu{
+			margin-left: 45px;
+  			display: block;
+ 			color: #ffffff;
+ 			font-size: 17px;
+  			position: relative;
+			margin-bottom: 10px;
+		}
+		.wrapper .sidebar a:hover,
+		.wrapper .sidebar a.active{
+			color: #cbcbcb;
+		}
+		.section {
+			width: calc(100% - 225px);
+			transition: all 0.5s ease;
+		}
+		.top_navbar{
+			background-color: rgba(0,0,0,0);
+			height: 50px;
+			display: flex;
+			align-items: center;
+			padding: 0 10px;
+		}
+		.hamburger{
+			padding-bottom: 15px;
+			font-size: 28px;
+			color: #ffffff;
+		}
+		.hamburger:hover{
+			color: #cbcbcb;
+		}
+		.search{
+			position: absolute;
+			right: 20px;
+		}
+		button{
+			background-color: rgba(255, 255, 255, 0);
+			color: #ffffff;
+			border-width: 2px;
+			border-color: rgba(255, 255, 255, 0);
+			font-size: 20px;
+			height: 20px;
+			vertical-align: top;
+		}
+		.heading{
+			color: #ffffff;
+			text-align: center;
+			margin-top: 100px;
+			font-size: 50px;
+			font-weight: 2px;
+			margin-left: 150px;
+		}
+		.textbody{
+			color: #ffffff;
+			text-align: center;
+			margin-left: 150px;
+			margin-top: 30px;
+		}
+		.search input{
+			background-color: #ffffff;
+			border-width: 0px;
+			border-radius: 2px;
+			height: 24px;
+			width: 200px;
+		}
+		.closebtn{
+			position: absolute;
+  			top: -5px;
+  			left: 10px;
+  			font-size: 50px;
+			color: #ffffff;
+			font-weight: lighter;
+		}
+		.closebtn:hover{
+			color: #cbcbcb;
+		}
+		section {
+			width: 100%;
+			display: inline-block;
+			background: #333;
+			height: 50vh;
+			text-align: center;
+			font-size: 22px;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		.footer-distributed{
+			background: #1c1c1c;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+			box-sizing: border-box;
+			width: 100%;
+			text-align: left;
+			font: bold 16px sans-serif;
+			padding: 55px 50px;
+		}
+
+		.footer-distributed .footer-left,
+		.footer-distributed .footer-center,
+		.footer-distributed .footer-right{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		/* Footer left */
+
+		.footer-distributed .footer-left{
+			width: 40%;
+		}
+
+		/* The company logo */
+
+		.footer-distributed h3{
+			color:  #ffffff;
+			font: normal 36px 'Montserrat';
+			margin: 0;
+		}
+
+		.footer-distributed h3 span{
+			color:  #3b7b5c;
+		}
+
+		/* Footer links */
+
+		.footer-distributed .footer-links{
+			color:  #ffffff;
+			margin: 20px 0 12px;
+			padding: 0;
+			}
+
+		.footer-distributed .footer-links a{
+			display:inline-block;
+			line-height: 1.8;
+			font-weight:400;
+			text-decoration: none;
+			color:  inherit;
+		}
+
+		.footer-distributed .footer-company-name{
+			color:  #92999f;
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		/* Footer Center */
+
+		.footer-distributed .footer-center{
+			width: 35%;
+		}
+
+		.footer-distributed .footer-center i{
+			background-color:  #33383b;
+			color: #ffffff;
+			font-size: 25px;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 42px;
+			margin: 10px 15px;
+			vertical-align: middle;
+		}
+
+		.footer-distributed .footer-center i.fa-envelope{
+			font-size: 17px;
+			line-height: 38px;
+		}
+
+		.footer-distributed .footer-center p{
+			display: inline-block;
+			color: #ffffff;
+			font-weight:400;
+			vertical-align: middle;
+			margin:0;
+		}
+
+		.footer-distributed .footer-center p span{
+			display:block;
+			font-weight: normal;
+			font-size:14px;
+			line-height:2;
+		}
+
+		.footer-distributed .footer-center p a{
+			color:  #3b7b5c;
+			text-decoration: none;;
+		}
+
+		.footer-distributed .footer-links a:before {
+			content: "|";
+			font-weight:300;
+			font-size: 20px;
+			left: 0;
+			color: #fff;
+			display: inline-block;
+			padding-right: 5px;
+		}
+
+		.footer-distributed .footer-links .link-1:before {
+			content: none;
+		}
+
+		/* Footer Right */
+
+		.footer-distributed .footer-right{
+			width: 20%;
+		}
+
+		.footer-distributed .footer-company-about{
+			line-height: 20px;
+			color:  #92999f;
+			font-size: 13px;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		.footer-distributed .footer-company-about span{
+			display: block;
+			color:  #ffffff;
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.footer-distributed .footer-icons{
+			margin-top: 25px;
+		}
+
+		.footer-distributed .footer-icons a{
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			background-color:  #33383b;
+			border-radius: 2px;
+
+			font-size: 20px;
+			color: #ffffff;
+			text-align: center;
+			line-height: 35px;
+
+			margin-right: 3px;
+			margin-bottom: 5px;
+		}
+
+		/* If you don't want the footer to be responsive, remove these media queries */
+
+		@media (max-width: 880px) {
+
+			.footer-distributed{
+				font: bold 14px sans-serif;
+			}
+
+			.footer-distributed .footer-left,
+			.footer-distributed .footer-center,
+			.footer-distributed .footer-right{
+				display: block;
+				width: 100%;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
+			.footer-distributed .footer-center i{
+				margin-left: 0;
+			}
+		}
+		.spotify{
+			color: #3b7b5c;
+		}
+		.w3{
+			color: #3b7b5c;
+		}
+		.link{
+			color: white;
+			font-size: 25px;
+			margin-left: 10px;
+		}
+		.game{
+            margin-bottom: 100px;
+            margin-top: 20px;
+        }
+		
+	</style>
+</html>
